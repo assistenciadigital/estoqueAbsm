@@ -1,0 +1,43 @@
+if ($_POST['id']){
+
+}else{
+
+?id=<?php echo $_POST['id']?>&descricao=<?php echo $_POST['descricao']?>
+
+where auxiliar_id like '%".$_POST['id']."%' and auxiliar_descricao like '%".$_POST['descricao']."%' and auxiliar_classificacao = ''
+
+where auxiliar_id like '%".$_GET['id']."%' and auxiliar_descricao like '%".$_GET['descricao']."%' and auxiliar_classificacao = ''
+
+	// Quantidade de registros pra paginação
+	$qtde_pesquisado = mysql_num_rows($select);
+	$qtde_registro   = mysql_num_rows(mysql_query("SELECT * from auxiliar where auxiliar_classificacao = ''"));
+
+
+
+
+if ($_GET['id']){
+	$id = $_GET['id'];
+}else{
+	$id = "Todos";
+}
+
+if ($_GET['descricao']){
+	$descricao = $_GET['descricao'];
+}else{
+	$descricao = "Todas";
+}
+
+$pdf-> SetFont("Courier", 'B', 8);
+$pdf-> Cell(0,4, number_format(($qtde_pesquisado), 0, ',', '.').' de '.number_format(($qtde_registro), 0, ',', '.')." Registro(s) Listado(s) para ID => ".$id." e Descricao Contendo => ".$descricao,1,0,'C');
+
+
+Filtra ID: <select name="id" id="id" style="width:80px; height: 20px;">
+        <option value="">ID</option>
+        <?php
+            $select_auxiliar = mysql_query ("SELECT auxiliar_id from auxiliar where auxiliar_classificacao = 'ASSISTENCIA' ORDER BY auxiliar_id");
+            if (mysql_num_rows ($select_auxiliar)) {
+            while ($row_auxiliar= mysql_fetch_assoc($select_auxiliar)) {
+            ?>
+        <option value="<?php echo $row_auxiliar['auxiliar_id']?>"<?php if($_POST['id'] == $row_auxiliar['auxiliar_id']) echo "selected"?>><?php echo $row_auxiliar['auxiliar_id']?></option>
+        <?php }}?>
+      </select>

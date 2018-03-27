@@ -1,0 +1,34 @@
+﻿# Host: localhost  (Version: 5.5.24-log)
+# Date: 2015-09-16 11:08:53
+# Generator: MySQL-Front 5.3  (Build 2.53)
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE */;
+/*!40101 SET SQL_MODE='' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES */;
+/*!40103 SET SQL_NOTES='ON' */;
+
+#
+# Source for table "movimento"
+#
+
+CREATE TABLE `movimento` (
+  `movimento_id` int(11) NOT NULL AUTO_INCREMENT,
+  `movimento_origem` int(11) DEFAULT NULL,
+  `movimento_destino` int(11) DEFAULT NULL,
+  `numero_documento` varchar(10) DEFAULT NULL,
+  `data_documento` date DEFAULT NULL,
+  `valor_documento` decimal(18,2) DEFAULT NULL,
+  `usuario_login` varchar(20) NOT NULL DEFAULT '',
+  `data` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`movimento_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='movimento';
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

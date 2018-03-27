@@ -1,0 +1,39 @@
+ACOMODACAO
+ENFERMARIA
+ABULATORIO
+
+ASSISTENCIA
+COMPLETA
+MEDICA
+ODONTOLOGICA
+
+ATENDIMENTO
+Atendimento data/hora informada
+Cancelamento Justificado-Paciente Ausente
+Cancelamento Nao Justificado-Paciente Ausente
+Cancelamento Justificado-Profissional Ausente
+Cancelamento Nao Justificado-Profissional Ausente
+Cancelamento Justificado-Estabelecimento
+
+CLASSIFICACAO
+SOCIO EFETIVO CBM/PM
+SOCIO CONTRIBUINTE
+PARTICULAR
+CONVENIO SUS
+
+COR
+DESTINO
+ESCOLARIDADE
+ESTADO CIVIL
+EXCLUSAO
+FORMA DE PAGAMENTO
+INSTITUICAO
+MOTIVO
+OCUPACAO
+ORIGEM
+PARENTESCO
+PATENTE
+PENDENCIA
+PROFISSAO
+STATUS
+TIPO

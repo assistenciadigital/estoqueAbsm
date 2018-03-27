@@ -1,0 +1,41 @@
+#ADICIONA RELACIONAMENTO
+
+ALTER TABLE `cidade` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `contagem` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `departamento` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `empresa` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `estoquelocal` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `fabricante` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `forma` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `fornecedor` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `grupo` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `historicomovimento` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `inventario` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `inventarioproduto` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `localestoque` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `medicamento` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `produto` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `tipomovimento` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `unidade` ADD FOREIGN KEY (`usuario_login`) REFERENCES `estoque`.`usuario` (`usuario_login`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+#REMOVE RELACIONAMENTO
+
+ALTER TABLE  `cidade` DROP FOREIGN KEY `cidade_ibfk_1`;
+
+ALTER TABLE `cidade` DROP FOREIGN KEY `cidade_ibfk_1`;
+ALTER TABLE `contagem` DROP FOREIGN KEY `contagem_ibfk_4`;
+ALTER TABLE `departamento` DROP FOREIGN KEY `departamento_ibfk_1`;
+ALTER TABLE `empresa` DROP FOREIGN KEY `empresa_ibfk_1`;
+ALTER TABLE `estoquelocal` DROP FOREIGN KEY `estoquelocal_ibfk_3`;
+ALTER TABLE `fabricante` DROP FOREIGN KEY `fabricante_ibfk_1`;
+ALTER TABLE `forma` DROP FOREIGN KEY `forma_ibfk_1`;
+ALTER TABLE `fornecedor` DROP FOREIGN KEY `fornecedor_ibfk_1`;
+ALTER TABLE `grupo` DROP FOREIGN KEY `grupo_ibfk_1`;
+ALTER TABLE `historicomovimento` DROP FOREIGN KEY `historicomovimento_ibfk_4`;
+ALTER TABLE `inventario` DROP FOREIGN KEY `inventario_ibfk_1`;
+ALTER TABLE `inventarioproduto` DROP FOREIGN KEY `inventarioproduto_ibfk_4`;
+ALTER TABLE `localestoque` DROP FOREIGN KEY `localestoque_ibfk_1`;
+ALTER TABLE `medicamento` DROP FOREIGN KEY `medicamento_ibfk_1`;
+ALTER TABLE `produto` DROP FOREIGN KEY `produto_ibfk_4`;
+ALTER TABLE `tipomovimento` DROP FOREIGN KEY `tipomovimento_ibfk_1`;
+ALTER TABLE `unidade` ADD FOREIGN KEY `unidade_ibfk_1`;
